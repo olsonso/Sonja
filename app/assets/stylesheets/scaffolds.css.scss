@@ -1,7 +1,7 @@
 body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  background: url('wallpaper.png');
+  color: #000;
+  font-family: Impact, Charcoal, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -24,7 +24,7 @@ a {
     color: #666;
   }
   &:hover {
-    color: #fff;
+    color: red;
     background-color: #000;
   }
 }

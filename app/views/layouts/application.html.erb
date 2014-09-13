@@ -1,20 +1,136 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head> 
+</head>
 
-<h1> Sonja Olson <p>
-	Oregon State University <p>
-</h1>
+<center>
+	<div class = "container-narrow">
+<div class ="jumbotron"><center>
+  <h1>Sonja Olson <p><small>Oregon State University<br> Computer Science </small></h1>
+</center>
+	<div class="navbar">
+		<div class = "navbar-inner">
+			<div class = "navbar-transparent">
+	 		<div class="container-fixed">
+	 	
+				<ul class="nav nav-tabs" role="tablist">
+  				<li class="active">
+				  <li><%= link_to 'Home', pages_home_path %></a></li>
+				  <li> <%= link_to 'Users', users_path %> </a> </li>
+				  <li> <%= link_to "About Me", pages_aboutme_path %> </a></li>
+
+				  <li class="dropdown">
+				    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Projects 
+					 </a>
+					    <ul class="dropdown-menu" role="menu">
+					 	<li> <a href = "#"> Projects </a></li>
+						    <li><a href="#">Action</a></li>
+						    <li><a href="#">Another action</a></li>
+						    <li><a href="#">Something else here</a></li>
+						    <li class="divider"></li>
+						    <li><a href="#">Separated link</a></li>
+					  </ul>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<div class = "container-narrow">
+
+<ul id="myTab" class="nav nav-tabs">
+   <li class="active">
+      <a href="#home" data-toggle="tab">
+         Tutorial Point Home
+      </a>
+   </li>
+   <li><a href="#ios" data-toggle="tab">iOS</a></li>
+   <li class="dropdown">
+      <a href="#" id="myTabDrop1" class="dropdown-toggle" 
+         data-toggle="dropdown">Java 
+         <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+         <li><a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a></li>
+         <li><a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a></li>
+      </ul>
+   </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+   <div class="tab-pane fade in active" id="home">
+      <p>Tutorials Point is a place for beginners in all technical areas. 
+         This website covers most of the latest technoligies and explains 
+         each of the technology with simple examples. You also have a 
+         <b>tryit</b> editor, wherein you can edit your code and 
+         try out different possibilities of the examples.</p>
+   </div>
+   <div class="tab-pane fade" id="ios">
+      <p>iOS is a mobile operating system developed and distributed by Apple 
+         Inc. Originally released in 2007 for the iPhone, iPod Touch, and 
+         Apple TV. iOS is derived from OS X, with which it shares the 
+         Darwin foundation. iOS is Apple's mobile version of the 
+         OS X operating system used on Apple computers.</p>
+   </div>
+   <div class="tab-pane fade" id="jmeter">
+      <p>jMeter is an Open Source testing software. It is 100% pure 
+      Java application for load and performance testing.</p>
+   </div>
+   <div class="tab-pane fade" id="ejb">
+      <p>Enterprise Java Beans (EJB) is a development architecture 
+         for building highly scalable and robust enterprise level    
+         applications to be deployed on J2EE compliant 
+         Application Server such as JBOSS, Web Logic etc.
+      </p>
+   </div>
+</div>
 
 <body>
-	<h2> Hello this is my website </h2>
+	<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        Inside
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	
 <%= yield %>
 
 </body>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src= "javascripts/jquery.backstretch.min.js"></script>
+<script type="text/javascript">
+	s.backstretch([
+		"wallpaper.png"
+		"flower.jpg"],
+		{ fade:750,
+			duration:4800}
+		);
+
+</script>
+<footer> Sonja Olson 2014 </footer>
 </html>
